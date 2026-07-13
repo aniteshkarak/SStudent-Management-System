@@ -18,3 +18,19 @@ document.getElementById("themeBtn").addEventListener("click", e => {
   e.target.textContent = e.target.textContent === "🌙" ? "☀️" : "🌙";
 });
 
+const menuBtn = document.getElementById("menubar");
+const sidebar = document.getElementById("sidebar");
+
+menuBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("-translate-x-full");
+});
+
+document.addEventListener("click", (e) => {
+    if (
+        window.innerWidth < 768 &&
+        !sidebar.contains(e.target) &&
+        !menuBtn.contains(e.target)
+    ) {
+        sidebar.classList.add("-translate-x-full");
+    }
+});
