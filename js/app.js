@@ -18,6 +18,7 @@ document.getElementById("themeBtn").addEventListener("click", e => {
   e.target.textContent = e.target.textContent === "🌙" ? "☀️" : "🌙";
 });
 
+// sidebar
 const menuBtn = document.getElementById("menubar");
 const sidebar = document.getElementById("sidebar");
 
