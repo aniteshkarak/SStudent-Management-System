@@ -308,31 +308,85 @@
             </div>
         </section>
 
-        <!-- Recent Activities -->
-         <section class="px-6 sm:px-8 mt-6 mb-8">
-            <div class="bg-white border border-zinc-200 rounded-2xl shadow-sm p-5">
-                <h2 class="    ">Recent Activities</h2>
 
-                <!-- single rotating slot -->
-                <div>
-                    <div>
-                        <span></span>
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6 px-6 sm:px-8 mb-8">
+
+            <!-- Recent Activities -->
+            <div class="bg-white border border-zinc-200 rounded-2xl shadow-sm p-5">
+
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-lg font-semibold text-zinc-800">
+                        Recent Activities
+                    </h2>
+
+                    <button class="text-sm text-amber-500 hover:underline">
+                        View All
+                    </button>
+                </div>
+
+                <!-- Activity Content -->
+                <div class="relative h-16 overflow-hidden">
+                    <div id="activitySlot"
+                        class="absolute inset-0 flex items-center gap-3 transition-all duration-300 ease-in-out">
+
+                        <span id="activityIcon"
+                            class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
+                        </span>
+
                         <div>
-                            <p></p>
-                            <p></p>
+                            <p id="activityText" class="font-medium text-zinc-800"></p>
+                            <p id="activityTime" class="text-sm text-zinc-500"></p>
                         </div>
+
                     </div>
                 </div>
 
-                <!-- dots showing position -->
-                <div id="activityDots" class="flex items-center gap-1.5 mt-4"></div>
-            </div>
-         </section>
+                <div id="activityDots" class="flex justify-center gap-2 mt-4"></div>
 
+            </div>
+
+            <!-- Upcoming Events -->
+            <div class="bg-white border border-zinc-200 rounded-2xl shadow-sm p-5">
+
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-lg font-semibold text-zinc-800">
+                        Upcoming Events
+                    </h2>
+                </div>
+
+                <div class="relative h-16 overflow-hidden">
+
+                    <div
+                        id="eventSlot"
+                        class="absolute inset-0 flex items-center gap-3 transition-all duration-300 ease-in-out">
+
+                        <span
+                            id="eventIcon"
+                            class="w-10 h-10 rounded-full flex items-center justify-center bg-blue-100">
+                        </span>
+
+                        <div class="min-w-0">
+                            <p id="eventTitle" class="font-medium text-zinc-800"></p>
+                            <p id="eventDate" class="text-sm text-zinc-500"></p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div
+                    id="eventDots"
+                    class="flex justify-center gap-2 mt-4">
+                </div>
+
+            </div>
+
+        </section>
     </main> 
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="./js/app.js"></script>
+<script src="./js/activities.js"></script>
 </body>
 </html>
